@@ -16,6 +16,7 @@
     "url": "https://github.com/RobinBlomberg/kysely-codegen/issues"
   },
   "homepage": "https://github.com/RobinBlomberg/kysely-codegen#readme",
+  "prepare": "npm run build",
   "scripts": {
     "build": "rimraf dist && tsc --project ./tsconfig.build.json",
     "check:types": "tsc --noEmit",
