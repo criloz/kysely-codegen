@@ -1,5 +1,6 @@
 import { Adapter } from '../../adapter';
 import { IdentifierNode } from '../../ast/identifier-node';
+import {RawExpressionNode} from "../../ast/raw-expression-node";
 
 export class SqliteAdapter extends Adapter {
   override readonly defaultScalar = new IdentifierNode('string');
@@ -7,8 +8,8 @@ export class SqliteAdapter extends Adapter {
     any: new IdentifierNode('unknown'),
     blob: new IdentifierNode('Buffer'),
     boolean: new IdentifierNode('number'),
-    integer: new IdentifierNode('bigint'),
-    numeric: new IdentifierNode('bigint'),
+    integer: new RawExpressionNode('bigint'),
+    numeric: new RawExpressionNode('bigint'),
     real: new IdentifierNode('number'),
     text: new IdentifierNode('string'),
   };
