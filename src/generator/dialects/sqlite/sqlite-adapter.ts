@@ -7,8 +7,8 @@ export class SqliteAdapter extends Adapter {
     any: new IdentifierNode('unknown'),
     blob: new IdentifierNode('Buffer'),
     boolean: new IdentifierNode('number'),
-    integer: new IdentifierNode('number'),
-    numeric: new IdentifierNode('number'),
+    integer: new IdentifierNode('bigint'),
+    numeric: new IdentifierNode('bigint'),
     real: new IdentifierNode('number'),
     text: new IdentifierNode('string'),
   };
